@@ -2,8 +2,8 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.314.0.min.js"></script>
     <script type="text/javascript">
     AWS.config.update({
-        accessKeyId: "AKIAYXPGKNCROGS6R6XR",
-        secretAccessKey: "",
+        accessKeyId: "AKIAYXPGKNCRCYOBEAGV",
+        secretAccessKey: "xxx",
         region: "us-east-2"
     });
     var s3 = new AWS.S3();
