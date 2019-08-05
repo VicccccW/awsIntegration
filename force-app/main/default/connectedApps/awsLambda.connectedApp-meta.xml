@@ -3,7 +3,7 @@
     <contactEmail>uniquewq91+awsIntegration+awsLambda@gmail.com</contactEmail>
     <label>awsLambda</label>
     <oauthConfig>
-        <callbackUrl>https://login.salesforce.com/services/oauth2/callback</callbackUrl>
+        <callbackUrl>http://localhost:3000/oauth/_callback</callbackUrl>
         <consumerKey>3MVG9G9pzCUSkzZvXTC0CSD4p71VIeq5_6gIsEm7oxqrWuHzFtzu7HTXBr59Pq3FfL1p.F88nwX4N47aJkst0</consumerKey>
         <scopes>Basic</scopes>
         <scopes>Api</scopes>
