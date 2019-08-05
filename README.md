@@ -1,3 +1,5 @@
+# Salesforce AWS Integration
+
 ## Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
@@ -26,7 +28,7 @@ If you are developing against non-source-tracked orgs, use the command `SFDX: Cr
 
 When working with non-source-tracked orgs, use the commands `SFDX: Deploy Source to Org` (VS Code) or `sfdx force:source:deploy` (Salesforce CLI) and `SFDX: Retrieve Source from Org` (VS Code) or `sfdx force:source:retrieve` (Salesforce CLI). The `Push` and `Pull` commands work only on orgs with source tracking (scratch orgs).
 
-### The `sfdx-project.json` File
+#### The `sfdx-project.json` File
 
 The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
@@ -63,6 +65,6 @@ Deploy your changes to production using [packaging](https://developer.salesforce
 
 1. create a new project in VSC
 2. git init
-3. commit change to local repo 
+3. commit change to local repo
 4. create a repo in github
 5. push init commit to orignal repo
