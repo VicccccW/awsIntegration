@@ -1,5 +1,7 @@
 # Salesforce AWS Integration
 
+Referrence link: s3-us-west-2.amazonaws.com/awssfdcintegrationcode/PDF+version+of+CommentedSource_license.pdf
+
 ## Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
@@ -87,7 +89,7 @@ Deploy your changes to production using [packaging](https://developer.salesforce
 1. go to object
 2. create new fields for mapping to S3
 
-### For Trigger Architect
+### For trigger architect
 
 1. trigger entry point
 2. trigger handler

@@ -1,0 +1,31 @@
+<aura:component controller="s3downloadController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="setMeOnInit" type="String" default="default value" />
+    <aura:attribute name="opportunity" type="Opportunity" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="record" type="Object" description="The record object to be
+ displayed" />
+    <aura:attribute name="OpptyRecord" type="Object" description="A simplified view record object to be displayed" />
+    <aura:attribute name="recordError" type="String" description="An error message bound to force:recordData" />
+    <force:recordData aura:id="record" layoutType="FULL" recordId="{!v.recordId}" targetError="{!v.recordError}" targetRecord="{!v.record}" targetFields="{!v.OpptyRecord }" mode="VIEW" />
+    <aura:attribute name="response" type="Map" />
+    <aura:attribute name="s3url" type="String" default="{!v.opportunity.S3_Archival_URL__c}" />
+    <aura:attribute name="s3bucket" type="String" default="{!v.opportunity.s3bucket__c}" />
+    <aura:attribute name="s3key" type="String" default="{!v.opportunity.s3key__c}" />
+    <div class="slds-m-around--none">
+        <!--Header part-->
+        <div class="slds-page-header" role="banner">
+            <div class="slds-media__body">
+                <p class="slds-page-header__title slds-truncate" title="S3
+ Storage">S3 Storage<br /><br /></p>
+                <lightning:layout verticalAlign="center">
+                    <lightning:layoutItem class="slds-p-left_x-small">
+                        {!v.opportunity.s3filename__c} &nbsp;&nbsp;
+                    </lightning:layoutItem>
+                    <lightning:layoutItem flexibility="grow">
+                        <lightning:button variant="brand" label="Download" onclick="{!c.handleClick}" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -12,9 +12,9 @@ public with sharing class OpportunityTriggerHelper {
     private Id nullId = null;
 
     //static block for pre-processing
-    static {
+    // static {
       
-    }
+    // }
 
     //This method is used to avoid recursion for before update scenario
     public static Boolean isFirstRunBefore() {
@@ -41,7 +41,40 @@ public with sharing class OpportunityTriggerHelper {
     }
 
     public void sendEventToAWS(Map<Id, Opportunity> newOppsMap) {
+        List<OppCRUD__e> newEvents = new List<OppCRUD__e>();
 
+        for(Opportunity opp : newOppsMap.values()) {
+            newEvents.add(createNewOppCRUDEvent(opp));
+        } 
+
+        publishEventToAWS(newEvents);
     }
 
+    private static OppCRUD__e createNewOppCRUDEvent(Opportunity opp) {
+        if(String.isBlank(opp.S3_Archival_URL__c)) {
+            OppCRUD__e newEvent = new OppCRUD__e(
+                OppId__c = opp.Id
+            );
+            return newEvent;
+        }
+
+        return null;
+    }
+
+    private static void PublishEventToAWS(List<OppCRUD__e> newEvents) {
+        List<Database.SaveResult> results = EventBus.publish(newEvents);
+
+        for(Database.SaveResult sr : results) {
+            if (sr.isSuccess()) {
+                System.debug('Successfully published event.');
+            } else {
+                for(Database.Error err : sr.getErrors()) {
+                    System.debug('Error returned: ' +
+                                err.getStatusCode() +
+                                ' - ' +
+                                err.getMessage());
+                }
+            }
+        }
+    }
 }

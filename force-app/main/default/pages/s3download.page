@@ -1,0 +1,18 @@
+<apex:page>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.314.0.min.js"></script>
+    <script type="text/javascript">
+    AWS.config.update({
+        accessKeyId: "YOUR_ACCESS_KEY",
+        secretAccessKey: "YOUR_SECRET",
+        region: "YOUR_REGION"
+    });
+    var s3 = new AWS.S3();
+    var urlParams = new URLSearchParams(window.location.search);
+    var bucket = urlParams.get('bucket');
+    var y = urlParams.get('key');
+    var params = { Bucket: bucket, Key: y };
+    s3.getSignedUrl('getObject', params, function(err, url) {
+        window.open(url, "_self");
+    });
+    </script>
+</apex:page>
