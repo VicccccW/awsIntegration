@@ -4,5 +4,4 @@
     <eventType>HighVolume</eventType>
     <label>OppCRUD</label>
     <pluralLabel>OppCRUD</pluralLabel>
-    <publishBehavior>PublishAfterCommit</publishBehavior>
 </CustomObject>

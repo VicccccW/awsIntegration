@@ -1,4 +1,4 @@
-<apex:page>
+<apex:page >
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.314.0.min.js"></script>
     <script type="text/javascript">
     AWS.config.update({

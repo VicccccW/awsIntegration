@@ -4,7 +4,6 @@
 
 # Salesforce cache
 .sfdx/
-force-app/main/default/connectedApps/
 
 # Logs
 logs
