@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>s3filename_c__c</fullName>
+    <fullName>s3filename__c</fullName>
     <externalId>false</externalId>
     <label>s3filename__c</label>
     <length>255</length>

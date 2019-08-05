@@ -18,7 +18,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Opportunity.s3filename_c__c</field>
+        <field>Opportunity.s3filename__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -43,7 +43,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>s3filename_c__c</field>
+                <field>s3filename__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
