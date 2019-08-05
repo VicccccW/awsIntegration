@@ -68,3 +68,28 @@ Deploy your changes to production using [packaging](https://developer.salesforce
 3. commit change to local repo
 4. create a repo in github
 5. push init commit to orignal repo
+
+### For creating a connected app in scratch org
+
+1. go to App Manager and create a New Connected App
+2. enable OAuth and give permission
+3. edit policy and relax IP restriction
+4. pull change from scratch org
+5. notice the Connected App consumerKey is per org
+
+### For creating platform event
+
+1. go to Platform Event
+2. create new PE with fields
+
+### For customizing SObject
+
+1. go to object
+2. create new fields for mapping to S3
+
+### For Trigger Architect
+
+1. trigger entry point
+2. trigger handler
+3. trigger helper
+4. optionally a trigger custom metadata type for execution order control
