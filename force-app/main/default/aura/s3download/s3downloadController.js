@@ -18,7 +18,7 @@
     handleClick: function(component, event) {
         var s3bucket = component.get("v.s3bucket");
         var s3key = component.get("v.s3key");
-        var myurl = "https://yourname-demo-dev-ed--c.na57.visual.force.com / apex / s3download ? bucket = " + s3bucket + " & key = " + s3key;
+        var myurl = "https://vicccccwaws-dev-ed--c.na57.visual.force.com/apex/s3download?bucket= " + s3bucket + "&key=" + s3key;
         console.log(myurl);
         window.open(myurl, "_blank"); //,"toolbar=yes,top=500,left=500,width=400,height=400");
     }
