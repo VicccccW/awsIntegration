@@ -2,9 +2,9 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.314.0.min.js"></script>
     <script type="text/javascript">
     AWS.config.update({
-        accessKeyId: "AKIAYXPGKNCRCYOBEAGV",
+        accessKeyId: "AKIAYXPGKNCROJY7PDET",
         secretAccessKey: "xxx",
-        region: "us-east-2"
+        region: "us-east-1"
     });
     var s3 = new AWS.S3();
     var urlParams = new URLSearchParams(window.location.search);
